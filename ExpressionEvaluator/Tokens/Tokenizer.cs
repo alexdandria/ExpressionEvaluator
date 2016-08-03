@@ -5,7 +5,7 @@ using System.Text;
 using ExpressionEvaluator.Operators;
 using ExpressionEvaluator.Tokens;
 
-namespace ExpressionEvaluator
+namespace ExpressionEvaluator.Tokens
 {
     sealed class Tokenizer
     {
@@ -95,7 +95,7 @@ namespace ExpressionEvaluator
 
             if (value == null)
             {
-                throw new EvaluationException(Inv($"Invalid operand \"{_char}\"."));
+                throw new EvaluationException(Inv($"Invalid operand \"{s}\"."));
             }
 
             return new OperandToken(value.Value);
