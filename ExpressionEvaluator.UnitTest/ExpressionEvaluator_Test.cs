@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ExpressionEvaluator
@@ -120,7 +119,7 @@ namespace ExpressionEvaluator
             Test(1.0 + 2.0 - 3.0 * 4.0 / 5.0 % Math.Pow(6.0, 7.0), "1.0 + 2.0 - 3.0 * 4.0 / 5.0 % 6.0 ^ 7.0");
             Test(128.0 + 256.0, "(128.0 + 256.0)");
             Test(
-                Math.Pow(((((1.0 + 2.0) - 3.0) * 4.0) / 5.0) % 6.0, 7.0), 
+                Math.Pow(((((1.0 + 2.0) - 3.0) * 4.0) / 5.0) % 6.0, 7.0),
                 "(((((1.0 + 2.0) - 3.0) * 4.0) / 5.0) % 6.0) ^ 7.0");
             Test(
                 128.0 + (256.0 - (512.0 * (1024.0 / (2048.0 % 4096) / 2048.0) * 512.0) - 256.0) + 128.0,
